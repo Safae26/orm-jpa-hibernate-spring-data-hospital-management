@@ -23,12 +23,14 @@ public class Medecin {
 
 
 }
+
+
+// 10 min video
 // Video cours
 // video 1 de tp
-
 //    - Consulter tous les patients
 //    - Consulter un patient
 //    - Chercher des patients
 //    - Mettre à jour un patient
 //    - supprimer un patient
-//7. Migrer de H2 Database vers MySQL
+// Migrer de H2 Database vers MySQL
