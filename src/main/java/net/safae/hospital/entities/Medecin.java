@@ -3,6 +3,7 @@ package net.safae.hospital.entities;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
+import net.safae.hospital.entities.RendezVous;
 
 import java.util.Collection;
 
@@ -33,4 +34,4 @@ public class Medecin {
 //    - Mettre à jour un patient
 //    - supprimer un patient
 // Migrer de H2 Database vers MySQL
-// readme, screenshots, noms des repos
+// readme, screenshots
