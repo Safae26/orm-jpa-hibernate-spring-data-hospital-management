@@ -10,4 +10,6 @@ public interface IHospitalService {
     Medecin saveMedecin(Medecin medecin);
     RendezVous saveRDV(RendezVous rendezVous);
     Consultation saveConsultation(Consultation consultation);
+
+    void deletePatient(Long id);
 }

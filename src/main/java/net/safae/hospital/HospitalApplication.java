@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.util.Date;
+import java.util.List;
 import java.util.stream.Stream;
 
 @SpringBootApplication
@@ -23,11 +24,10 @@ public class HospitalApplication {
 
 	@Bean
 	CommandLineRunner start(
-			PatientRepository patientRepository,
-			MedecinRepository medecinRepository,
-			RendezVousRepository rendezVousRepository,
-			//ConsultationRepository consultationRepository
-			IHospitalService iHospitalService) {
+            PatientRepository patientRepository,
+            MedecinRepository medecinRepository,
+            RendezVousRepository rendezVousRepository,
+            IHospitalService iHospitalService, ConsultationRepository consultationRepository) {
 		// Retourne un objet qui est toujours un composant Spring
 		return args -> {
 			// Opérations de gestion :
@@ -72,6 +72,38 @@ public class HospitalApplication {
 			consultation.setRendezVous(rendezVous1);
 			consultation.setRapport("Rapport de la consultation ...");
 			iHospitalService.saveConsultation(consultation);
+
+            // Chercher tous des patients
+			List<Patient> patients = patientRepository.findAll();
+			patients.forEach(
+					p->{
+						p.getNom();
+						p.getDateNaissance();
+					});
+
+			// Chercher un patient
+            patientRepository.findById(1L);
+
+            // Mettre à jour un patient
+            if (patient1 != null) {
+                patient1.setNom("Mohammed Benali");
+                patient1.setMalade(true);
+                iHospitalService.savePatient(patient1);
+            }
+
+            // Supprimer un patient
+            Patient patientToDelete = patientRepository.findByNom("Lina");
+            if (patientToDelete != null) {
+                System.out.println("\nSuppression du patient: " + patientToDelete.getNom());
+                iHospitalService.deletePatient(patientToDelete.getId());
+
+                // Vérification de la suppression
+                if (patientRepository.findById(patientToDelete.getId()).isEmpty()) {
+                    System.out.println("Patient supprimé avec succès");
+                } else {
+                    System.out.println("Échec de la suppression du patient");
+                }
+            }
 		};
 	}
 }

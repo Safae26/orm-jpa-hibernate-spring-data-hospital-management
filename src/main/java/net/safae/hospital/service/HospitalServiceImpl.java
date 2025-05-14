@@ -50,4 +50,9 @@ public class HospitalServiceImpl implements IHospitalService {
     public Consultation saveConsultation(Consultation consultation) {
         return consultationRepository.save(consultation);
     }
+
+    @Override
+    public void deletePatient(Long patientId) {
+        patientRepository.deleteById(patientId);
+    }
 }

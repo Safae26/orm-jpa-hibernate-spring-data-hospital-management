@@ -27,11 +27,4 @@ public class Medecin {
 
 }
 
-
-//    - Consulter tous les patients
-//    - Consulter un patient
-//    - Chercher des patients
-//    - Mettre à jour un patient
-//    - supprimer un patient
-// Migrer de H2 Database vers MySQL
-// readme, screenshots
+// readme, screenshots, vid
