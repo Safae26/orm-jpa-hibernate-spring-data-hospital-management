@@ -197,6 +197,8 @@ La méthode `start()` (annotée `@Bean`) exécute ces opérations au démarrage 
    - Génère une `Consultation` liée au rendez-vous
    - Ajoute un rapport médical fictif
 
+<img width="779" alt="image" src="https://github.com/user-attachments/assets/13f98dd3-992f-4fb8-9a42-58225e827ea5" />
+
 Cette initialisation permet de simuler un scénario clinique complet pour faciliter les tests et démonstrations.
 
 ## ⚙️ Configuration (application.properties)
