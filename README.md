@@ -30,7 +30,7 @@ Le projet suit une architecture en couches typique d'une application Spring Boot
 - **Point d'entrée à l'application**
 `HospitalApplication` - Classe principale annotée `@SpringBootApplication`
 
-<img width="289" alt="image" src="https://github.com/user-attachments/assets/b0fdf0db-09e9-4fde-af3b-621db0ccc597" />
+ <img width="289" alt="image" src="https://github.com/user-attachments/assets/b0fdf0db-09e9-4fde-af3b-621db0ccc597" />
 
 
 ## 📄 Explication détaillée des Classes
@@ -52,6 +52,9 @@ Entité JPA représentant la table des patients dans la base de données.
 | `malade`        | `boolean`     | Statut médical actuel.                                                     |
 | `rendezVous`    | `Collection`  | Liste des rendez-vous associés (`@OneToMany(mappedBy="patient", fetch=LAZY`). |
 
+<img width="453" alt="image" src="https://github.com/user-attachments/assets/c77f7afc-ddd7-4c71-871e-7d32a9948b22" />
+
+
 ---
 
 ### 2. Classe `Médecin`
@@ -62,7 +65,9 @@ Entité représentant les médecins du système.
 - `id` : Identifiant unique (`@GeneratedValue`).  
 - `nom`, `email`, `spécialité` : Informations professionnelles.  
 - `rendezVous` : Liste des rendez-vous (`@OneToMany(mappedBy="médecin")`).  
-  - `@JsonProperty(access=WRITE_ONLY)` : Empêche la sérialisation JSON pour éviter les cycles infinis.  
+  - `@JsonProperty(access=WRITE_ONLY)` : Empêche la sérialisation JSON pour éviter les cycles infinis.
+
+<img width="525" alt="image" src="https://github.com/user-attachments/assets/59e3a3cb-c8ff-4b11-a53e-eea102a19deb" />
 
 ---
 
@@ -78,6 +83,8 @@ Entité représentant les médecins du système.
 | `date`    | `LocalDateTime` | Date et heure du rendez-vous.                                              |
 | `status`  | `StatusRDV`  | Statut persistant sous forme de chaîne (`@Enumerated(EnumType.STRING)`).   |
 
+<img width="497" alt="image" src="https://github.com/user-attachments/assets/b1baeaef-0d3a-4977-8917-1221a56f4e62" />
+
 ---
 
 ### 4. Classe `Consultation`  
@@ -89,6 +96,8 @@ Entité représentant les médecins du système.
 - `rapport` : Diagnostic médical (`@Lob` pour les textes longs).  
 - `@JsonProperty(WRITE_ONLY)` sur le champ `rendezVous`.  
 
+<img width="508" alt="image" src="https://github.com/user-attachments/assets/1beea21f-bc0d-451a-a895-7d4e6092509c" />
+
 ---
 
 ### 5. Enumération `StatusRDV`  
@@ -97,7 +106,10 @@ Entité représentant les médecins du système.
 - `CANCELLED` (Annulé)  
 - `APPROVED` (Accepté)  
 **Usage** :  
-Persisté en base sous forme de chaîne via `@Enumerated(EnumType.STRING)` dans `RendezVous`.  
+Persisté en base sous forme de chaîne via `@Enumerated(EnumType.STRING)` dans `RendezVous`.
+
+<img width="310" alt="image" src="https://github.com/user-attachments/assets/499bc821-d97a-4abd-9305-0aafe9386e06" />
+
 
 ## 🛠️ Services
 
