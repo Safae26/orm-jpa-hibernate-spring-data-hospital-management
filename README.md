@@ -125,6 +125,9 @@ Cette interface facilite l’évolutivité, la maintenance et les tests unitaire
 - `saveRDV(RendezVous rendezVous)` : Crée un rendez-vous médical. Un identifiant unique est généré automatiquement.
 - `saveConsultation(Consultation consultation)` : Enregistre une consultation médicale.
 
+<img width="559" alt="image" src="https://github.com/user-attachments/assets/8192b889-e8d6-48ac-826a-671486763301" />
+
+
 Cette interface pose les fondations de la logique métier, laissant l’implémentation concrète aux classes de service.
 
 ---
@@ -143,6 +146,9 @@ La classe `HospitalServiceImpl` est l’implémentation concrète de l’interfa
 - `saveMedecin(Medecin medecin)` : Enregistre un nouveau médecin via le `MedecinRepository`.
 - `saveRDV(RendezVous rendezVous)` : Génère un identifiant aléatoire (UUID) pour chaque rendez-vous avant de l’enregistrer.
 - `saveConsultation(Consultation consultation)` : Persiste une nouvelle consultation médicale dans la base de données.
+
+<img width="785" alt="image" src="https://github.com/user-attachments/assets/58761269-dd8c-44c7-8da4-3a444e7f53f6" />
+<img width="785" alt="image" src="https://github.com/user-attachments/assets/916ddc7d-8969-4c16-9c3a-a2ec46f5293a" />
 
 `HospitalServiceImpl` centralise ainsi toute la logique métier liée à la gestion des entités médicales, tout en s’appuyant sur les repositories pour la persistance. Elle constitue un exemple typique de couche service dans une application Spring Boot bien structurée.
 
