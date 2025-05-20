@@ -164,6 +164,8 @@ La classe `PatientRestController` est un contrôleur REST qui expose les donnée
 - La méthode `patientList()` annotée avec `@GetMapping("/patients")` est déclenchée sur les requêtes GET vers `/patients`
 - Retourne les données des patients au format JSON via `patientRepository.findAll()`
 
+<img width="528" alt="image" src="https://github.com/user-attachments/assets/b3413f96-48ce-4db7-8590-9c705142d730" />
+
 Ce contrôleur joue un rôle essentiel dans l'architecture REST en faisant le lien entre les clients (navigateurs, applications frontales) et la base de données.
 
 ### Classe Principale `HospitalApplication`
