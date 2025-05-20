@@ -271,6 +271,9 @@ La console H2 est accessible à :
 - **JDBC URL** : `jdbc:h2:mem:hospital`
 - **User Name** : `sa` (ou vide)
 - **Password** : (vide)
+  
+<img width="523" alt="image" src="https://github.com/user-attachments/assets/188cbef1-cfc5-4cfa-afbe-9a08405f69e9" />
+
 
 ## 📝 Conclusion
 Ce projet implémente une application complète de gestion hospitalière avec :
