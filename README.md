@@ -30,6 +30,9 @@ Le projet suit une architecture en couches typique d'une application Spring Boot
 - **Point d'entrée à l'application**
 `HospitalApplication` - Classe principale annotée `@SpringBootApplication`
 
+<img width="289" alt="image" src="https://github.com/user-attachments/assets/b0fdf0db-09e9-4fde-af3b-621db0ccc597" />
+
+
 ## 📄 Explication détaillée des Classes
 
 ### 1. Classe `Patient`  
