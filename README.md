@@ -110,6 +110,28 @@ Persisté en base sous forme de chaîne via `@Enumerated(EnumType.STRING)` dans 
 
 <img width="310" alt="image" src="https://github.com/user-attachments/assets/499bc821-d97a-4abd-9305-0aafe9386e06" />
 
+## 🗂️ Repositories
+
+- Interface ConsultationRepository : L'interface ConsultationRepository est une interface de persistance spécifique à l'entité Consultation. Elle étend JpaRepository<Consultation, Long>, ce qui lui fournit automatiquement un ensemble complet de méthodes CRUD (Create, Read, Update, Delete) sans nécessiter d'implémentation manuelle. Ici, Consultation désigne l'entité gérée, tandis que Long correspond au type de sa clé primaire (ID).
+Avec Spring Data JPA, cette interface est automatiquement détectée et peut être injectée dans les services via le mécanisme d'injection de dépendances.
+
+<img width="603" alt="image" src="https://github.com/user-attachments/assets/4cfe86f5-08b9-4076-8ac8-c7927f3afdb6" />
+
+- Interface MedecinRepository : L’interface MedecinRepository permet d'interagir avec la base de données pour l'entité Medecin. En étendant JpaRepository<Medecin, Long>, elle bénéficie automatiquement des opérations CRUD de base. Elle inclut également une méthode personnalisée findByNom(String nom) pour rechercher un médecin par son nom.
+Grâce à Spring Data JPA, l'implémentation de cette méthode est générée dynamiquement à partir de son nom, éliminant le besoin d'écrire une requête SQL manuelle.
+
+<img width="583" alt="image" src="https://github.com/user-attachments/assets/fd3080a0-d1c2-41c8-80b0-f83de16d40f0" />
+
+- Interface PatientRepository : L’interface PatientRepository gère l'accès aux données de l'entité Patient en étendant JpaRepository<Patient, Long>. Elle fournit ainsi les opérations CRUD standards, ainsi qu'une méthode personnalisée findByNom(String nom) pour rechercher un patient par son nom.
+Spring Data JPA interprète automatiquement cette méthode et génère la requête appropriée, sans nécessiter d'implémentation manuelle.
+
+<img width="544" alt="image" src="https://github.com/user-attachments/assets/0267e9bd-c0cf-46b7-b012-129458b93972" />
+
+- Interface RendezVousRepository : L'interface RendezVousRepository gère la persistance des entités RendezVous en étendant JpaRepository<RendezVous, String>, indiquant ainsi que sa clé primaire est de type String.
+Grâce à cette extension, elle offre automatiquement toutes les opérations CRUD de base, éliminant le besoin d'implémenter manuellement les requêtes.
+
+<img width="593" alt="image" src="https://github.com/user-attachments/assets/0c5619e5-af4c-4b9a-9091-5de46bad9964" />
+
 
 ## 🛠️ Services
 
