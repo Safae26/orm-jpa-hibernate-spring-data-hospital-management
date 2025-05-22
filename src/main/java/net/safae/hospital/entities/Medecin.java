@@ -23,4 +23,4 @@ public class Medecin {
 
 }
 
-// results, and update and push last 2 repo ioc et hospital management, resize screenshots of these 2 repos, and read them to see if missed something
+// results
